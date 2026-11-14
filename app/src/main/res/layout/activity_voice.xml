@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_900"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="8dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_back" android:textColor="@color/blue_300" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/voice_title" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+            <TextView style="@style/SettingLabel" android:text="@string/voice_current" android:textSize="13sp" android:textColor="@color/text_secondary" />
+            <TextView android:id="@+id/voiceCurrent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+            <TextView android:id="@+id/voicePending" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textColor="@color/amber_400" android:textSize="13sp" android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:background="@drawable/bg_card" android:orientation="vertical" android:padding="16dp">
+            <TextView style="@style/SettingLabel" android:text="@string/voice_message_label" android:textSize="13sp" android:textColor="@color/text_secondary" />
+            <TextView android:id="@+id/voiceMessage" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:lineSpacingMultiplier="1.5" android:textColor="@color/text_primary" android:textSize="17sp" />
+            <TextView style="@style/HintText" android:text="@string/voice_hint" />
+        </LinearLayout>
+
+        <TextView android:id="@+id/voiceError" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/voice_error_file" android:textColor="@color/red_400" android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnPick" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/voice_pick" android:textColor="@color/navy_900" app:backgroundTint="@color/blue_300" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnPreview" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/voice_preview" android:textColor="@color/blue_300" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnDefault" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/voice_use_default" android:textColor="@color/blue_300" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/btnSaveVoice" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/voice_save" android:textColor="@color/navy_900" app:backgroundTint="@color/green_400" />
+    </LinearLayout>
+</ScrollView>

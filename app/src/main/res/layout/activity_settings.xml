@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navy_900"
+    android:layoutDirection="rtl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:orientation="horizontal" android:paddingBottom="8dp">
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnBack" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/btn_back" android:textColor="@color/blue_300" />
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/settings_title" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView style="@style/SectionTitle" android:text="@string/section_threshold" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView style="@style/SettingLabel" android:text="@string/label_high" />
+                <TextView android:id="@+id/highValue" style="@style/SettingValue" />
+            </LinearLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/highSlider" android:layout_width="match_parent" android:layout_height="wrap_content" app:labelBehavior="gone" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+                <TextView style="@style/SettingLabel" android:text="@string/label_low" />
+                <TextView android:id="@+id/lowValue" style="@style/SettingValue" />
+            </LinearLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/lowSlider" android:layout_width="match_parent" android:layout_height="wrap_content" app:labelBehavior="gone" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+                <TextView style="@style/SettingLabel" android:text="@string/label_confirm" />
+                <TextView android:id="@+id/confirmValue" style="@style/SettingValue" />
+            </LinearLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/confirmSlider" android:layout_width="match_parent" android:layout_height="wrap_content" app:labelBehavior="gone" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+                <TextView style="@style/SettingLabel" android:text="@string/label_duration" />
+                <TextView android:id="@+id/durationValue" style="@style/SettingValue" />
+            </LinearLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/durationSlider" android:layout_width="match_parent" android:layout_height="wrap_content" app:labelBehavior="gone" />
+        </LinearLayout>
+
+        <TextView style="@style/SectionTitle" android:text="@string/section_alert" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                <TextView style="@style/SettingLabel" android:text="@string/label_cooldown" />
+                <TextView android:id="@+id/cooldownValue" style="@style/SettingValue" />
+            </LinearLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/cooldownSlider" android:layout_width="match_parent" android:layout_height="wrap_content" app:labelBehavior="gone" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+                <TextView style="@style/SettingLabel" android:text="@string/label_repeats" />
+                <TextView android:id="@+id/repeatsValue" style="@style/SettingValue" />
+            </LinearLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/repeatsSlider" android:layout_width="match_parent" android:layout_height="wrap_content" app:labelBehavior="gone" />
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp">
+                <TextView style="@style/SettingLabel" android:text="@string/label_repeat_delay" />
+                <TextView android:id="@+id/repeatDelayValue" style="@style/SettingValue" />
+            </LinearLayout>
+            <com.google.android.material.slider.Slider android:id="@+id/repeatDelaySlider" android:layout_width="match_parent" android:layout_height="wrap_content" app:labelBehavior="gone" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchMedication" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/switch_medication" android:textColor="@color/text_primary" />
+            <TextView style="@style/HintText" android:text="@string/hint_medication" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchSound" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/switch_sound" android:textColor="@color/text_primary" />
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchVibration" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="@string/switch_vibration" android:textColor="@color/text_primary" />
+        </LinearLayout>
+
+        <TextView style="@style/SectionTitle" android:text="@string/section_test" />
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16dp">
+            <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/switchSimulation" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/switch_simulation" android:textColor="@color/text_primary" />
+            <TextView style="@style/HintText" android:text="@string/hint_simulation" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/error_low_high"
+            android:textColor="@color/red_400"
+            android:visibility="gone" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_save_settings"
+            android:textColor="@color/navy_900"
+            app:backgroundTint="@color/blue_300" />
+    </LinearLayout>
+</ScrollView>
