@@ -62,6 +62,13 @@ public class H59MonitorService extends Service {
     private static final long[] VIBRATE_LOW = {0, 500};
 
     private final Handler main = new Handler(Looper.getMainLooper());
+    private BluetoothGatt gatt;
+private BluetoothGattCharacteristic writeChar;
+private BluetoothLeScanner scanner;
+private ScanCallback scanCallback;
+private String watchName = DEVICE_NAME;
+private LinkState linkState = LinkState.STOPPED;
+private boolean running;
     private final Runnable scanTimeout = () -> {
         stopScanning();
         if (running && gatt == null) {
@@ -80,13 +87,7 @@ public class H59MonitorService extends Service {
     private Vibrator vibrator;
     private HeartRateAlertEngine engine = new HeartRateAlertEngine();
 
-    private BluetoothGatt gatt;
-    private BluetoothGattCharacteristic writeChar;
-    private BluetoothLeScanner scanner;
-    private ScanCallback scanCallback;
-    private String watchName = DEVICE_NAME;
-    private LinkState linkState = LinkState.STOPPED;
-    private boolean running;
+   
     private int lastBpm;
     private long lastAlertAt;
     private int repeatsRemaining;
